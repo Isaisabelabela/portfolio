@@ -1,0 +1,198 @@
+/* Arquivo: css/style.css */
+
+/* Estilos globais */
+body {
+    font-family: 'Montserrat', sans-serif; /* Fonte moderna e estilosa */
+    color: #4a4a4a; /* Cinza escuro suave para o texto */
+    background-color: #ffe6f2; /* Rosa bem claro como fundo principal */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px; /* Ligeiramente menor para um visual mais contido */
+    padding: 30px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
+    padding: 15px 0;
+    border-bottom: 2px solid #ffb3d9; /* Destaque em rosa */
+}
+
+.navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 700; /* Mais bold */
+    color: #ff69b4 !important; /* Rosa vibrante para a marca */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 105, 180, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Ícone do menu em rosa */
+}
+
+.navbar-nav .nav-link {
+    color: #4a4a4a;
+    margin-left: 20px;
+    font-weight: 500; /* Um pouco mais de ênfase */
+    transition: color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff69b4;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ff69b4;
+    font-weight: 700;
+}
+
+/* Conteúdo principal */
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.jumbotron {
+    background-color: #fff0f5; /* Rosa bem suave para o jumbotron */
+    padding: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.jumbotron h1 {
+    color: #ff69b4;
+    font-weight: 800; /* Bem chamativo */
+    margin-bottom: 1rem;
+}
+
+.jumbotron p.lead {
+    color: #777;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #ff1493; /* Rosa mais escuro no hover */
+    border-color: #ff1493;
+}
+
+.btn-secondary {
+    background-color: #f08080; /* Rosa um pouco mais fechado */
+    border-color: #f08080;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #cd5c5c; /* Tom mais escuro no hover */
+    border-color: #cd5c5c;
+}
+
+.card {
+    border: none; /* Remove a borda padrão */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    margin-bottom: 20px;
+    background-color: #fff; /* Fundo branco para os cards */
+}
+
+.card-img-top {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+    height: 220px; /* Altura um pouco maior */
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff69b4;
+    font-weight: 700;
+}
+
+/* Sobre Mim */
+.rounded-circle {
+    width: 120px; /* Um pouco menor */
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #ffb3d9; /* Borda rosa */
+}
+
+/* Rodapé */
+footer {
+    background-color: #fff0f5; /* Rosa bem suave */
+    border-top: 2px solid #ffb3d9; /* Destaque rosa */
+    color: #777;
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ff69b4;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff1493;
+    text-decoration: underline;
+}
+
+/* Estilos específicos para a página de interesses */
+#interesses-page .card-title {
+    color: #ff80ab; /* Tom de rosa diferente */
+}
+
+#interesses-page ul li a {
+    color: #ff69b4;
+    font-weight: 500;
+}
+
+/* Estilos específicos para a página de projetos */
+#projetos-page .card {
+    /* Já estilizado acima */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+        padding-left: 1rem;
+    }
+
+    .col-md-6 {
+        margin-bottom: 30px; /* Mais espaço entre os projetos em telas menores */
+    }
+
+    .rounded-circle {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 3px solid #ffb3d9;
+    }
+}
