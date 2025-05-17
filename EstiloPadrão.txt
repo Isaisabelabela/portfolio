@@ -1,0 +1,40 @@
+Paleta de cores:
+Rosa Principal (Vibrante): #ff69b4 (usado para elementos de destaque como a marca, links ativos, títulos de cards e botões primários).
+Rosa Claro (Fundo Principal): #ffe6f2 (usado para o body).
+Rosa Bem Suave (Jumbotron, Rodapé): #fff0f5.
+Rosa Médio (Borda de Destaque, Borda da Imagem de Perfil): #ffb3d9.
+Rosa Mais Escuro (Hover dos Botões Primários e Links do Rodapé): #ff1493.
+Cinza Escuro Suave (Texto Principal): #4a4a4a.
+Cinza Médio (Texto Secundário): #777 (usado em parágrafos "lead" e texto do rodapé).
+Branco: #fff (usado para fundos de cabeçalho, cards e texto em botões).
+Tom de Rosa Alternativo (Títulos da Página de Interesses): #ff80ab.
+Tom de Rosa Mais Fechado (Botões Secundários): #f08080.
+Tom de Rosa Mais Escuro (Hover dos Botões Secundários): #cd5c5c.
+
+Tipografia:
+Fonte Principal: 'Montserrat', sans-serif //Certifique de incluir essa fonte via @import do Google Fonts ou outra forma, se ainda não estiver no HTML.
+Tamanhos de Fonte: tamanhos relativos (em, rem) sempre que possível para melhor acessibilidade e responsividade. Uso de rem para títulos (1.7rem, 1.5rem) e tamanhos base (1rem no body implícito).
+Pesos da Fonte: pesos definidos (400, 500, 600, 700, 800) para criar hierarquia visual e ênfase.
+line-height: 1.6;: boa prática para a legibilidade do texto.
+Transições: transições suaves (transition: color 0.3s ease, transition: background-color 0.3s ease, border-color 0.3s ease) //hover de links e botões
+
+Espaçamento e Layout:
+container: a classe .container com max-width: 1100px e padding: 30px para centralizar e dar espaço ao conteúdo principal.
+Margens e Paddings: margens (margin-bottom, margin-left, margin-top) e paddings (padding, padding-left, padding-right, padding-top, padding-bottom) de forma consistente para criar espaço em branco e estruturar os elementos. Observar os valores utilizados (em pixels e rem).
+Sistema de Grid do Bootstrap: (classes como .row, .col-md-*). Continuar utilizando o sistema de grid para layouts responsivos.
+Espaçamento entre Seções: margens verticais em elementos main ou em seções específicas para separá-las visualmente (padding-top, padding-bottom em main).
+
+Bordas e Sombras:
+Bordas de Destaque: bordas com a cor rosa principal (#ffb3d9) para elementos como o header e o footer para criar uma linha visual consistente.
+border-radius: valores consistentes para arredondar cantos (0.5rem, 0.3rem).
+box-shadow: sombras sutis (rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.05)) para adicionar profundidade e destacar elementos como o header e os cards.
+
+Componentes Específicos:
+Botões: as classes .btn-primary e .btn-secondary com os estilos definidos para manter a consistência visual dos botões. Observar os estilos de hover.
+Cards: classe .card com as propriedades definidas (sem borda, borda arredondada, sombra, fundo branco). Estilize os elementos internos do card (.card-img-top, .card-body, .card-title) de acordo com o padrão.
+Imagens Arredondadas: a classe .rounded-circle com as dimensões e borda rosa definidas para imagens de perfil ou similares.
+Navbar: estilização da navbar, incluindo a cor da marca, o ícone do toggler e o estilo dos links (cor padrão, hover e ativo).
+
+Responsividade:
+Media Queries: @media (max-width: ...) para adaptar o layout e os estilos para telas menores (como a largura de 767.98px neste exemplo). Continuar usando media queries para diferentes breakpoints, se necessário.
+
