@@ -1,12 +1,10 @@
-/* Arquivo: css/style.css */
-
 /* Estilos globais */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #4a4a4a; /* texto cinza escuro */
-    background-color: #ffe6f2; /* fundo rosa clarinho */
+    color: #4a4a4a; 
+    background-color: #ffe6f2; 
     line-height: 1.6;
     margin: 0;
     padding: 0;
