@@ -236,3 +236,16 @@ a:hover {
         border: 3px solid #ffb3d9;
     }
 }
+
+.btn-pink {
+  background-color: #f78fb3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: #f368e0;
+}
