@@ -1,84 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Análise de Dados na Prática - Portfólio Isabela</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-      <a class="navbar-brand" href="../index.html">Meu Portfólio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Análise de Dados na Prática - Portfólio Isabela</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="../index.html">Meu Portfólio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../sobre.html">Sobre Mim</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../interesses.html">Interesses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../projetos.html">Projetos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <div class="text-left">
+      <button class="btn btn-pink mt-4" onclick="history.back()">
+        ← Voltar
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre Mim</a></li>
-          <li class="nav-item active"><a class="nav-link" href="../interesses.html">Interesses</a></li>
-          <li class="nav-item"><a class="nav-link" href="../projetos.html">Projetos</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-<div class="text-left">
-  <button class="btn btn-pink mt-4" onclick="history.back()">← Voltar</button>
-</div>
-
-  <main class="container mt-5">
-    <h2 class="mb-4 text-center text-primary">Como analiso dados de forma prática no dia a dia 📊</h2>
-
-    <article class="bg-white p-4 rounded shadow-sm">
-      <p>
-        Analisar dados no dia a dia é mais simples do que parece — e muito mais poderoso do que muitos imaginam. Aqui está o meu processo prático:
-      </p>
-
-      <h4 class="mt-4">1. Recolha dos dados</h4>
-      <p>Uso ferramentas como Google Forms, arquivos CSV ou bases públicas. Sempre começo entendendo o formato dos dados.</p>
-
-      <h4 class="mt-4">2. Tratamento com Python</h4>
-      <p>Uso <strong>Pandas</strong> para limpar os dados (remover nulos, corrigir tipos e normalizar textos). Um exemplo clássico:</p>
-      <pre><code>import pandas as pd
-
-df = pd.read_csv("dados.csv")
-df.dropna(inplace=True)
-df["categoria"] = df["categoria"].str.lower()</code></pre>
-
-      <h4 class="mt-4">3. Análise exploratória</h4>
-      <p>Com <code>df.describe()</code>, histogramas e gráficos com Matplotlib ou Seaborn, começo a entender padrões.</p>
-
-      <h4 class="mt-4">4. Geração de insights</h4>
-      <p>Busco responder perguntas como: "Quais produtos vendem mais?", "Qual o comportamento dos usuários em X situação?".</p>
-
-      <h4 class="mt-4">5. Comunicação</h4>
-      <p>Uso <strong>Dashboards</strong> no Power BI, ou gráficos em Jupyter Notebooks, para apresentar os resultados com clareza.</p>
-
-      <blockquote class="blockquote mt-4">
-        <p class="mb-0">🔎 Dica: Dados sem análise são apenas números. Transforme em história!</p>
-      </blockquote>
-    </article>
-
-    <div class="mt-5 text-center">
-      <a href="../interesses.html" class="btn btn-outline-primary">← Voltar para Interesses</a>
     </div>
-  </main>
 
-  <footer class="bg-light text-center py-3 mt-5">
-    <p>&copy; 2025 Portfólio Isabela</p>
-    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark social-icon">
-      <i class="fab fa-github fa-lg"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary social-icon">
-      <i class="fab fa-linkedin fa-lg"></i>
-    </a>
-  </footer>
+    <main class="container mt-5">
+      <h2>
+        Como analiso dados de forma prática no dia a dia 📊
+      </h2>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+      <article class="bg-white p-4 rounded shadow-sm">
+        <p>
+          Analisar dados no dia a dia é mais simples do que parece — e muito
+          mais poderoso do que muitos imaginam. Aqui está o meu processo
+          prático:
+        </p>
+
+        <h4 class="mt-4">1. Recolha dos dados</h4>
+        <p>
+          Uso ferramentas como Google Forms, arquivos CSV ou bases públicas.
+          Sempre começo entendendo o formato dos dados.
+        </p>
+
+        <h4 class="mt-4">2. Tratamento com Python</h4>
+        <p>
+          Uso <strong>Pandas</strong> para limpar os dados (remover nulos,
+          corrigir tipos e normalizar textos). Um exemplo clássico:
+        </p>
+        <pre><code>import pandas as pd
+
+        df = pd.read_csv("dados.csv")
+        df.dropna(inplace=True)
+        df["categoria"] = df["categoria"].str.lower()</code></pre>
+
+        <h4 class="mt-4">3. Análise exploratória</h4>
+        <p>
+          Com <code>df.describe()</code>, histogramas e gráficos com Matplotlib
+          ou Seaborn, começo a entender padrões.
+        </p>
+
+        <h4 class="mt-4">4. Geração de insights</h4>
+        <p>
+          Busco responder perguntas como: "Quais produtos vendem mais?", "Qual o
+          comportamento dos usuários em X situação?".
+        </p>
+
+        <h4 class="mt-4">5. Comunicação</h4>
+        <p>
+          Uso <strong>Dashboards</strong> no Power BI, ou gráficos em Jupyter
+          Notebooks, para apresentar os resultados com clareza.
+        </p>
+
+        <blockquote class="blockquote mt-4">
+          <p class="mb-0">
+            🔎 Dica: Dados sem análise são apenas números. Transforme em
+            história!
+          </p>
+        </blockquote>
+      </article>
+    </main>
+
+    <footer class="bg-light text-center py-3 mt-5">
+      <p>&copy; 2025 Portfólio Isabela</p>
+      <a
+        href="https://github.com/Isaisabelabela"
+        target="_blank"
+        class="mx-2 text-dark social-icon"
+      >
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/isabeladepaulabarbosa/"
+        target="_blank"
+        class="mx-2 text-primary social-icon"
+      >
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

@@ -1,72 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre Mim - Portfólio Isabela</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Mim - Portfólio Isabela</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="index.html">Meu Portfólio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="sobre.html"
+                >Sobre Mim <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="interesses.html">Interesses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projetos.html">Projetos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-      <a class="navbar-brand" href="index.html">Meu Portfólio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item active"><a class="nav-link" href="sobre.html">Sobre Mim <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="interesses.html">Interesses</a></li>
-          <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-        </ul>
+    <main class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-3">
+          <img
+            src="imagens/minhaFoto.jpeg"
+            alt="Minha Foto"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-md-8">
+          <h2>Prazer, Isabela!</h2>
+          <p>
+            Sou estudante de Ciência da Computação e apaixonada por transformar
+            dados brutos em ideias que realmente fazem sentido. Gosto de olhar
+            para planilhas e enxergar oportunidades — e quando não estou fazendo
+            isso, provavelmente estou dando vida a alguma interface com código com
+            café do lado. ✨
+          </p>
+
+          <p>
+            No dia a dia, uso <strong>Python</strong> e
+            <strong>SQL</strong> para analisar dados, automatizar tarefas e, as
+            vezes, corrigir os bugs que eu mesma criei 😅. Também me divirto no
+            front-end, criando páginas com <strong>HTML</strong>,
+            <strong>CSS</strong> e um toque de <strong>PHP</strong>, sempre
+            tentando deixar tudo mais leve, bonito e funcional.
+          </p>
+
+          <p>Gosto de resolver problemas na base da lógica e aprender testando na prática. Ah, e pra sair um pouco do mundo dos códigos, nada melhor do que um bom treino ou uma caminhada ao ar livre — é assim que recarrego as energias!</p>
+
+  <h3>Habilidades em destaque:</h3>
+  <ul>
+    <li>Manipulação de dados com <strong>Python</strong> (Pandas, NumPy, etc.)</li>
+    <li>Consultas, joins e modelagem com <strong>SQL</strong></li>
+    <li>Front-end com <strong>HTML</strong>, <strong>CSS</strong> e <em>boas práticas visuais</em></li>
+    <li>Desenvolvimento com <strong>PHP</strong></li>
+
+  </ul>
+
+          <p>
+            📬 Quer bater um papo? Me manda um e-mail:
+            <a
+              href="mailto:isabelabarbosa2002@hotmail.com"
+              class="text-primary font-weight-bold"
+            >
+              isabelabarbosa2002@hotmail.com
+            </a>
+          </p>
+        </div>
       </div>
-    </nav>
-  </header>
+    </main>
 
-  <main class="container mt-5">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center mb-3">
-        <img src="imagens/minhaFoto.jpeg" alt="Minha Foto" class="img-fluid rounded-circle">
-      </div>
-      <div class="col-md-8">
-        <h2>Prazer, Isabela!</h2>
-        <p>Sou estudante de Ciência da Computação apaixonada por transformar dados em descobertas e ideias em interfaces. ✨</p>
-        <p>Trabalho com <strong>Python</strong> e <strong>SQL</strong> para análise de dados e adoro criar experiências de usuário com <strong>HTML</strong>, <strong>CSS</strong> e <strong>PHP</strong>. Busco sempre unir lógica e criatividade no que faço.</p>
-        <p>Curiosa por natureza e sempre pronta para encarar novos desafios. Se você gosta de tech, dados ou café ☕, provavelmente vamos nos dar bem!</p>
-        
-        <h3>Habilidades:</h3>
-        <ul>
-          <li>Python & Análise de Dados</li>
-          <li>SQL para consultas e modelagem</li>
-          <li>HTML & CSS modernos</li>
-          <li>PHP e lógica de programação</li>
-        </ul>
+    <footer class="bg-light text-center py-3 mt-5">
+      <p>&copy; 2025 Portfólio Isabela</p>
+      <a
+        href="https://github.com/Isaisabelabela"
+        target="_blank"
+        class="mx-2 text-dark social-icon"
+      >
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/isabeladepaulabarbosa/"
+        target="_blank"
+        class="mx-2 text-primary social-icon"
+      >
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </footer>
 
-        <p>📬 Quer bater um papo? Me manda um e-mail: 
-          <a href="mailto:isabelabarbosa2002@hotmail.com" class="text-primary font-weight-bold">
-            isabelabarbosa2002@hotmail.com
-          </a>
-        </p>
-      </div>
-    </div>
-  </main>
-
-  <footer class="bg-light text-center py-3 mt-5">
-    <p>&copy; 2025 Portfólio Isabela</p>
-    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark social-icon">
-      <i class="fab fa-github fa-lg"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary social-icon">
-      <i class="fab fa-linkedin fa-lg"></i>
-    </a>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

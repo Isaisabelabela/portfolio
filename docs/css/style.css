@@ -59,6 +59,17 @@ main {
     padding-bottom: 40px;
 }
 
+main ul a {
+  color: #4a4a4a; /* ou "black", ou outra cor */
+  text-decoration: none; /* opcional: remove o sublinhado */
+}
+
+main ul a:hover {
+  color: #ff69b4; 
+  text-decoration: underline; 
+}
+
+
 /* Jumbotron */
 .jumbotron {
     background-color: #fff0f5;
@@ -235,4 +246,32 @@ a:hover {
         height: 150px;
         border: 3px solid #ffb3d9;
     }
+}
+
+.btn-pink {
+  background-color: #f78fb3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s;
+}
+
+.btn-pink:hover {
+  background-color: #f368e0;
+}
+
+/* Links em parágrafos ou fora de listas específicas */
+a:not(.btn):not(.nav-link):not(footer a):not(main ul a) {
+  color: #ff69b4;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+a:not(.btn):not(.nav-link):not(footer a):not(main ul a):hover {
+  color: #ff1493;
+  border-bottom: 2px solid #ffb3d9;
+  text-decoration: none;
 }
