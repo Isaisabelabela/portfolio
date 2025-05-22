@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projetos - Portfólio Isabela</title>
+
     <!-- Bootstrap 4.5.2 CSS -->
     <link
       rel="stylesheet"
@@ -12,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+
     <!-- Font Awesome para ícones -->
     <link
       rel="stylesheet"
@@ -57,7 +59,8 @@
     <main class="container mt-5">
       <h2>Meus Projetos</h2>
 
-      <div class="row">
+      <div class="row row-equal-height">
+        <!-- Projeto: Gerador de dados -->
         <div class="col-md-6 mb-4">
           <div class="card">
             <img
@@ -69,26 +72,73 @@
             <div class="card-body">
               <h5 class="card-title">Gerador de dados txt e sql</h5>
               <p class="card-text">
-                Para testar análise de dados. Aqui você pode gerar dados de
-                pessoas com atributos e pode baixar como .txt ou estrutura SQL
-                (com CREATE TABLE e INSERT).
+                Gere dados fictícios e baixe como arquivos .txt ou estrutura SQL
+                com CREATE e INSERT.
               </p>
-              <a
-                href="projetos/Projeto1/gerador.html"
-                class="btn btn-primary"
-                target="_blank"
-                >Ver Detalhes</a
+              <button
+                class="btn btn-secondary"
+                onclick="toggleDetalhes('detalhes-gerador')"
               >
+                Ver Detalhes
+              </button>
               <a
                 href="https://github.com/Isaisabelabela/gerador"
-                class="btn btn-secondary"
+                class="btn btn-primary"
                 target="_blank"
-                >GitHub</a
               >
+                Acessar Repositório
+              </a>
+              <div
+                id="detalhes-gerador"
+                class="detalhes-content mt-3"
+                style="display: none"
+              >
+                <ul>
+                  <li>📄 Geração de nomes, CPFs, endereços e mais</li>
+                  <li>📥 Exportação para .txt ou comandos SQL completos</li>
+                  <li>⚙️ Útil para testes em sistemas de análise de dados</li>
+                  <li>🎯 Simples e direto: ideal para iniciantes</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <!-- Você pode adicionar mais projetos copiando o bloco acima -->
+
+        <!-- Projeto: JoinMeInSQL -->
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Repositório JoinMeInSQL</h5>
+              <p class="card-text">
+                Aprenda SQL do básico ao avançado com um passo a passo completo.
+              </p>
+              <button
+                class="btn btn-secondary"
+                onclick="toggleDetalhes('detalhes-sql')"
+              >
+                Ver Detalhes
+              </button>                              <a
+                  href="https://github.com/Isaisabelabela/JoinMeInSQL"
+                  target="_blank"
+                  class="btn btn-primary mt-2"
+                >Acessar Repositório
+                </a>
+              <div
+                id="detalhes-sql"
+                class="detalhes-content mt-3"
+                style="display: none"
+              >
+                <ul>
+                  <li>✅ Sintaxe SQL para CRUD completo</li>
+                  <li>🔗 Tipos de JOIN explicados com exemplos visuais</li>
+                  <li>🧠 Desafios práticos e simulações de banco real</li>
+                  <li>💬 Comentários detalhados linha por linha</li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -128,5 +178,14 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Script para alternar exibição de detalhes -->
+    <script>
+      function toggleDetalhes(id) {
+        const detalhes = document.getElementById(id);
+        detalhes.style.display =
+          detalhes.style.display === "block" ? "none" : "block";
+      }
+    </script>
   </body>
 </html>

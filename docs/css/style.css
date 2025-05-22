@@ -275,3 +275,34 @@ a:not(.btn):not(.nav-link):not(footer a):not(main ul a):hover {
   border-bottom: 2px solid #ffb3d9;
   text-decoration: none;
 }
+
+/* Faz as colunas se comportarem com altura igual, sem esticar conteúdo */
+.row-equal-height {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Faz cada coluna se ajustar à mesma altura da maior */
+.row-equal-height > [class^="col-"] {
+  display: flex;
+}
+
+/* Deixa o card ocupar toda a altura da coluna */
+.card {
+  width: 100%;
+}
+
+/*Cor do botao ver detalhes*/
+.btn.btn-secondary {
+  background-color: #d63384; /* rosa */
+  border-color: #d63384;
+  color: #fff;
+}
+
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus,
+.btn.btn-secondary:active {
+  background-color: #b0266b; /* rosa mais escuro para hover */
+  border-color: #a22062;
+  color: #fff;
+}
