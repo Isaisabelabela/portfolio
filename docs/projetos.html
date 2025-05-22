@@ -58,17 +58,11 @@
 
     <main class="container mt-5">
       <h2>Meus Projetos</h2>
-
+      <br>
       <div class="row row-equal-height">
         <!-- Projeto: Gerador de dados -->
         <div class="col-md-6 mb-4">
           <div class="card">
-            <img
-              src="imagens/projeto1.png"
-              alt="Projeto 1"
-              class="card-img-top"
-              onerror="this.src='https://via.placeholder.com/350x200?text=Imagem+do+Projeto'"
-            />
             <div class="card-body">
               <h5 class="card-title">Gerador de dados txt e sql</h5>
               <p class="card-text">
@@ -108,7 +102,7 @@
         <div class="col-md-6 mb-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Repositório JoinMeInSQL</h5>
+              <h5 class="card-title">JoinMeInSQL</h5>
               <p class="card-text">
                 Aprenda SQL do básico ao avançado com um passo a passo completo.
               </p>
@@ -117,12 +111,13 @@
                 onclick="toggleDetalhes('detalhes-sql')"
               >
                 Ver Detalhes
-              </button>                              <a
-                  href="https://github.com/Isaisabelabela/JoinMeInSQL"
-                  target="_blank"
-                  class="btn btn-primary mt-2"
+              </button>
+              <a
+                href="https://github.com/Isaisabelabela/JoinMeInSQL"
+                target="_blank"
+                class="btn btn-primary mt-2"
                 >Acessar Repositório
-                </a>
+              </a>
               <div
                 id="detalhes-sql"
                 class="detalhes-content mt-3"
@@ -134,7 +129,70 @@
                   <li>🧠 Desafios práticos e simulações de banco real</li>
                   <li>💬 Comentários detalhados linha por linha</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Projeto: Previsao de aluguel -->
+        <div class="col-md-6 mb-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                Previsão de Preço de Aluguel de Imóveis
+              </h5>
+              <p class="card-text">
+                O programa tem como objetivo prever preços de aluguel de imóveis
+                usando análise de dados, modelos de machine learning e
+                visualizações interativas para ajudar na tomada de decisão.
+              </p>
+              <button
+                class="btn btn-secondary"
+                onclick="toggleDetalhes('detalhes-prevAlu')"
+              >
+                Ver Detalhes
+              </button>
+              <a
+                href="https://github.com/Isaisabelabela/PrevisaoAluguel"
+                target="_blank"
+                class="btn btn-primary mt-2"
+                >Acessar Repositório
+              </a>
+              <div
+                id="detalhes-prevAlu"
+                class="detalhes-content mt-3"
+                style="display: none"
+              >
+                <h3>Tecnologias Utilizadas</h3>
+                <ul>
+                  <li>
+                    <strong>Python</strong>: linguagem principal do projeto
+                  </li>
+                  <li>
+                    <strong>Pandas e NumPy</strong>: manipulação e processamento
+                    de dados
+                  </li>
+                  <li>
+                    <strong>Matplotlib e Seaborn</strong>: visualização estática
+                    de dados
+                  </li>
+                  <li>
+                    <strong>Plotly</strong>: visualização interativa e
+                    dashboards
+                  </li>
+                  <li>
+                    <strong>scikit-learn</strong>: construção e avaliação de
+                    modelos de machine learning
+                  </li>
+                  <li>
+                    <strong>XGBoost</strong>: modelo avançado de boosting para
+                    regressão
+                  </li>
+                  <li>
+                    <strong>Faker</strong>: geração de dados sintéticos para
+                    simulação de dataset
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
