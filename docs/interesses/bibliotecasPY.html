@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ferramentas que uso em projetos com Python - Portfólio Isabela</title>
+  <!-- Bootstrap 4.5.2 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <a class="navbar-brand" href=".../index.html">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="../interesses.html">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projetos.html">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <div class="text-left">
+    <button class="btn btn-pink mt-4" onclick="history.back()">← Voltar</button>
+    </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mb-5">
+  <section class="text-center mb-5">
+    <h2 class="display-5 fw-bold">Ferramentas que uso em projetos com Python</h2>
+    <p class="lead text-muted">
+      Essas são as bibliotecas que tornam meu processo de análise e modelagem de dados mais simples, divertido e poderoso.
+    </p>
+  </section>
+
+  <!-- Card: Python -->
+  <section class="row g-4">
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>Python — o cérebro da operação</h3>
+          <p class="card-text">
+            Simples e versátil, Python comanda tudo no projeto: leitura de dados, processamento, visualização e modelagem. É o ponto de partida e também o elo entre todas as outras ferramentas.
+          </p>
+          <pre><code>import pandas as pd
+df = pd.read_csv('vendas.csv')
+print(df.head())</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pandas e NumPy -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>Pandas e NumPy — dupla dinâmica</h3>
+          <p class="card-text">
+            <strong>Pandas</strong> organiza dados como tabelas. <strong>NumPy</strong> faz contas e cálculos eficientes. São essenciais para transformar dados brutos em informações úteis.
+          </p>
+          <pre><code># Pandas
+vendas_altas = df[df['valor'] > 1000]
+
+# NumPy
+import numpy as np
+media = np.mean([10, 20, 30])</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Matplotlib e Seaborn -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>Matplotlib e Seaborn — visual bonito e claro</h3>
+          <p class="card-text">
+            Com <strong>Matplotlib</strong> você tem o básico da visualização. Já o <strong>Seaborn</strong> dá um toque de design e torna tudo mais interpretável com menos código.
+          </p>
+          <pre><code>import seaborn as sns
+sns.countplot(data=df, x='produto')</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Plotly -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>Plotly — gráficos interativos</h3>
+          <p class="card-text">
+            Gráficos que respondem ao mouse e criam dashboards incríveis. O <strong>Plotly</strong> é ideal para transformar relatórios estáticos em experiências dinâmicas.
+          </p>
+          <pre><code>import plotly.express as px
+fig = px.pie(df, names='categoria', values='vendas')
+fig.show()</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- scikit-learn -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>scikit-learn — machine learning sem dor</h3>
+          <p class="card-text">
+            Quer treinar um modelo de regressão ou classificação com poucas linhas? O <strong>scikit-learn</strong> é sua melhor escolha, com APIs simples e diretas.
+          </p>
+          <pre><code>from sklearn.linear_model import LinearRegression
+modelo = LinearRegression()
+modelo.fit(X_train, y_train)</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- XGBoost -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>XGBoost — o motor turbo do aprendizado</h3>
+          <p class="card-text">
+            Quando você quer performance em modelos preditivos, o <strong>XGBoost</strong> entra em cena com boosting poderoso e otimizações inteligentes.
+          </p>
+          <pre><code>import xgboost as xgb
+modelo = xgb.XGBRegressor()
+modelo.fit(X_train, y_train)</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Faker -->
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <h3>Faker — dados fictícios com estilo real</h3>
+          <p class="card-text">
+            Precisa simular um banco de dados para teste? O <strong>Faker</strong> gera nomes, emails, telefones e muito mais — perfeito para testes sem violar privacidade.
+          </p>
+          <pre><code>from faker import Faker
+fake = Faker()
+print(fake.name(), '-', fake.email())</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resumo -->
+  <section class="mt-5 text-center">
+    <h4 class="mb-3">Resumo visual</h4>
+    <p class="text-muted">
+      Essas ferramentas me ajudam a construir desde a base até o topo de um projeto de dados completo: coleta, análise, visualização, aprendizado de máquina e apresentação.
+    </p>
+  </section>
+</main>
+
+
+
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2025 Portfólio Isabela</p>
+    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+  </footer>
+
+  <!-- Scripts Bootstrap 4.5.2 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -316,3 +316,11 @@ a:not(.btn):not(.nav-link):not(footer a):not(main ul a):hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
 }
+
+
+pre {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
