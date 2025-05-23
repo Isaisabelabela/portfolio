@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como gerar um relatório AVL com ABAP - Portfólio Isabela</title>
+  <!-- Bootstrap 4.5.2 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <a class="navbar-brand" href=".../index.html">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="../interesses.html">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projetos.html">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <div class="text-left">
+    <button class="btn btn-pink mt-4" onclick="history.back()">← Voltar</button>
+    </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="container mb-5">
+    <h2 class="mb-4">Como gerar um relatório ALV no SAP</h2>
+
+    <section class="mb-4">
+      <h4>📌 O que é ALV (ABAP List Viewer)?</h4>
+      <p>É uma ferramenta padrão do SAP que permite exibir listas de dados de forma estruturada e interativa, oferecendo:</p>
+      <ul>
+        <li>Ordenação de colunas</li>
+        <li>Filtros automáticos</li>
+        <li>Exportação para Excel</li>
+        <li>Layouts personalizados</li>
+      </ul>
+    </section>
+
+    <section class="mb-4">
+      <h4>🧱 Estrutura de um relatório ALV</h4>
+      <ul>
+        <li>Tabela interna com os dados</li>
+        <li>Catálogo de campos (field catalog)</li>
+        <li>Função <code>REUSE_ALV_LIST_DISPLAY</code> para exibição</li>
+      </ul>
+    </section>
+
+    <section class="mb-4">
+      <h4>🛠️ Etapas para criar um ALV simples</h4>
+
+      <strong>1. Declarar dados:</strong>
+      <pre><code>TYPE-POOLS: slis.
+DATA: tabela_dados    TYPE TABLE OF &lt;estrutura_dados&gt;,
+      linha_dados     TYPE &lt;estrutura_dados&gt;,
+      catalogo_campos TYPE slis_t_fieldcat_alv,
+      campo_alv       TYPE slis_fieldcat_alv.</code></pre>
+
+      <strong>2. Criar parâmetros de seleção:</strong>
+      <pre><code>SELECTION-OPTIONS: s_campos FOR &lt;estrutura_dados&gt;-&lt;campo_chave&gt;.</code></pre>
+
+      <strong>3. Buscar dados com SELECT:</strong>
+      <pre><code>SELECT campo1 campo2 campo3
+  FROM &lt;tabela_base_dados&gt;
+  INTO CORRESPONDING FIELDS OF TABLE tabela_dados
+  WHERE campo_chave IN s_campo_chave.</code></pre>
+
+      <strong>4. Construir o catálogo de campos:</strong>
+      <pre><code>CLEAR campo_alv.
+campo_alv-fieldname  = 'CAMPO1'.
+campo_alv-seltext_m  = 'Texto explicativo do campo 1'.
+APPEND campo_alv TO catalogo_campos.
+
+CLEAR campo_alv.
+campo_alv-fieldname  = 'CAMPO2'.
+campo_alv-seltext_m  = 'Texto explicativo do campo 2'.
+APPEND campo_alv TO catalogo_campos.</code></pre>
+
+      <strong>5. Exibir o ALV:</strong>
+      <pre><code>CALL FUNCTION 'REUSE_ALV_LIST_DISPLAY'
+  EXPORTING
+    i_callback_program = sy-repid
+    it_fieldcat        = catalogo_campos
+  TABLES
+    t_outtab           = tabela_dados.</code></pre>
+    </section>
+
+    <section class="mb-4">
+      <h4>💡 Dicas importantes</h4>
+      <ul>
+        <li>Use <code>INTO CORRESPONDING FIELDS</code> para evitar warnings.</li>
+        <li>Defina <code>seltext_m</code> para os títulos das colunas no ALV.</li>
+        <li>Use prefixos como <code>it_</code> (tabelas internas) e <code>wa_</code> (linhas).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>✅ Conclusão</h4>
+      <p>O ALV é uma ferramenta poderosa para exibir dados no SAP com recursos interativos. Com poucos passos você já consegue gerar relatórios profissionais e úteis para o dia a dia!</p>
+    </section>
+
+  </main>
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2025 Portfólio Isabela</p>
+    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+  </footer>
+
+  <!-- Scripts Bootstrap 4.5.2 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
