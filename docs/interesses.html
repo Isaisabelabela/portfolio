@@ -1,105 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interesses - Portfólio Isabela</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interesses - Portfólio Isabela</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <a class="navbar-brand" href="index.html">Meu Portfólio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre Mim</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="interesses.html"
+                >Interesses <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projetos.html">Projetos</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-</head>
-<body>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-      <a class="navbar-brand" href="index.html">Meu Portfólio</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
-          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre Mim</a></li>
-          <li class="nav-item active"><a class="nav-link" href="interesses.html">Interesses <span class="sr-only">(current)</span></a></li>
-          <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+    <main class="container mt-5">
+      <h2 class="mb-4">O que me move na tecnologia 💻</h2>
 
-  <main class="container mt-5">
-    <h2 class="mb-4">O que me move na tecnologia 💻</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Análise de Dados</h5>
+              <p class="card-text">
+                Sou fascinada por descobrir histórias por trás dos números! Uso
+                Python (com Pandas, NumPy, Scikit-learn) e SQL para transformar
+                dados crus em insights estratégicos. Adoro encontrar padrões e
+                gerar soluções baseadas em dados.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Análise de Dados</h5>
-            <p class="card-text">
-              Sou fascinada por descobrir histórias por trás dos números! Uso Python (com Pandas, NumPy, Scikit-learn) e SQL para transformar dados crus em insights estratégicos. Adoro encontrar padrões e gerar soluções baseadas em dados.
-            </p>
+        <div class="col-md-6 mb-4">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Desenvolvimento Front-end</h5>
+              <p class="card-text">
+                Criar interfaces bonitas e intuitivas é uma das minhas paixões.
+                Trabalho com HTML, CSS, Bootstrap e PHP para desenvolver páginas
+                que sejam tanto funcionais quanto encantadoras. Estou sempre
+                testando novas ideias de design e usabilidade.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 mb-4">
-        <div class="card border-0 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Desenvolvimento Front-end</h5>
-            <p class="card-text">
-              Criar interfaces bonitas e intuitivas é uma das minhas paixões. Trabalho com HTML, CSS, Bootstrap e PHP para desenvolver páginas que sejam tanto funcionais quanto encantadoras. Estou sempre testando novas ideias de design e usabilidade.
-            </p>
-          </div>
+      <section id="posts" class="mt-5">
+        <h3 class="mb-4">Posts e conteúdos que compartilho</h3>
+
+        <div class="mb-4">
+          <h5>Análise de Dados</h5>
+          <ul class="list-unstyled ml-3">
+            <li>
+              <a href="interesses/dicaAnalise.html"
+                >Como analiso dados de forma prática no dia a dia</a
+              >
+            </li>
+            <li>
+              <a href="interesses/difDadoInfor.html"
+                >Diferença entre dados e informação</a
+              >
+            </li>
+          </ul>
         </div>
-      </div>
-    </div>
 
-<section id="posts" class="mt-5">
-  <h3 class="mb-4">Posts e conteúdos que compartilho</h3>
+        <div class="mb-4">
+          <h5>Front-end</h5>
+          <ul class="list-unstyled ml-3">
+            <li>
+              <a href="interesses/dicas.html"
+                >Dicas de front-end que melhoraram meu portfólio</a
+              >
+            </li>
+          </ul>
+        </div>
 
-  <div class="mb-4">
-    <h5> Análise de Dados</h5>
-    <ul class="list-unstyled ml-3">
-      <li><a href="interesses/dicaAnalise.html">Como analiso dados de forma prática no dia a dia</a></li>
-    </ul>
-  </div>
+        <div class="mb-4">
+          <h5>SQL & Banco de Dados</h5>
+          <ul class="list-unstyled ml-3">
+            <li>
+              <a href="interesses/dicasSQL.html"
+                >Aprenda SQL do básico ao avançado com meu repositório</a
+              >
+            </li>
+          </ul>
+        </div>
 
-  <div class="mb-4">
-    <h5> Front-end</h5>
-    <ul class="list-unstyled ml-3">
-      <li><a href="interesses/dicas.html">Dicas de front-end que melhoraram meu portfólio</a></li>
-    </ul>
-  </div>
+        <div>
+          <h5>SAP</h5>
+          <ul class="list-unstyled ml-3">
+            <li>
+              <a href="interesses/dicaALV.html"
+                >Como gerar um relatório ALV no SAP</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
 
-  <div class="mb-4">
-    <h5> SQL & Banco de Dados</h5>
-    <ul class="list-unstyled ml-3">
-      <li><a href="interesses/dicasSQL.html">Aprenda SQL do básico ao avançado com meu repositório</a></li>
-    </ul>
-  </div>
+    <footer class="bg-light text-center py-3 mt-5">
+      <p>&copy; 2025 Portfólio Isabela</p>
+      <a
+        href="https://github.com/Isaisabelabela"
+        target="_blank"
+        class="mx-2 text-dark social-icon"
+      >
+        <i class="fab fa-github fa-lg"></i>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/isabeladepaulabarbosa/"
+        target="_blank"
+        class="mx-2 text-primary social-icon"
+      >
+        <i class="fab fa-linkedin fa-lg"></i>
+      </a>
+    </footer>
 
-  <div>
-    <h5> SAP </h5>
-    <ul class="list-unstyled ml-3">
-      <li><a href="interesses/dicaALV.html">Como gerar um relatório ALV no SAP</a></li>
-    </ul>
-  </div>
-</section>
-
-  </main>
-
-  <footer class="bg-light text-center py-3 mt-5">
-    <p>&copy; 2025 Portfólio Isabela</p>
-    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark social-icon">
-      <i class="fab fa-github fa-lg"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary social-icon">
-      <i class="fab fa-linkedin fa-lg"></i>
-    </a>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

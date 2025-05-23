@@ -306,3 +306,13 @@ a:not(.btn):not(.nav-link):not(footer a):not(main ul a):hover {
   border-color: #a22062;
   color: #fff;
 }
+
+.custom-card {
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
