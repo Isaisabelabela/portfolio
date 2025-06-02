@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como adicionar uma coluna em uma tabela no SAP (SE11) - Portfólio Isabela</title>
+  <!-- Bootstrap 4.5.2 CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <a class="navbar-brand" href=".../index.html">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="../interesses.html">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projetos.html">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+    <div class="text-left">
+    <button class="btn btn-pink mt-4" onclick="history.back()">← Voltar</button>
+    </div>
+  <!-- CONTEÚDO PRINCIPAL -->
+     <main class="container my-5">
+      <section class="mb-4">
+        <h1 class="display-5">Como adicionar uma coluna em uma tabela no SAP (SE11)</h1>
+        <p class="lead">
+          Este guia mostra como adicionar um novo campo (coluna) em uma tabela existente no SAP, utilizando a transação SE11 (ABAP Dictionary).
+        </p>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">O que é uma coluna no SAP?</h2>
+        <p>
+          No SAP, uma coluna corresponde a um campo (field) da tabela. Adicionar uma coluna significa incluir um novo campo na estrutura da tabela, o que altera a definição da base de dados.
+        </p>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">Passo a passo para adicionar uma nova coluna</h2>
+        <ol>
+          <li>Acesse a transação <strong>SE11</strong>:
+            <ul>
+              <li>Na barra de comandos SAP, digite <code>SE11</code> e pressione Enter.</li>
+              <li>Você será direcionado ao ABAP Dictionary.</li>
+            </ul>
+          </li>
+          <li>Selecione a opção <strong>Tabela</strong> e insira o nome da tabela:
+            <ul>
+              <li>Exemplo: <code>ZMEU_EXEMPLO_TB</code></li>
+              <li>Clique em <strong>Exibir</strong> (Display) ou <strong>Alterar</strong> (Change), se tiver permissão.</li>
+            </ul>
+          </li>
+          <li>Clique na aba ou botão <strong>Campos</strong> (Fields):
+            <ul>
+              <li>Você verá a estrutura da tabela com todos os campos existentes.</li>
+            </ul>
+          </li>
+          <li>Adicione uma nova linha com os seguintes dados:</li>
+        </ol>
+
+        <div class="table-responsive">
+          <table class="table table-bordered mt-3">
+            <thead class="table-light">
+              <tr>
+                <th>Campo</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nome do campo</td>
+                <td>Nome técnico do novo campo</td>
+              </tr>
+              <tr>
+                <td>Tipo de dados</td>
+                <td>Ex: CHAR, NUM, DEC etc.</td>
+              </tr>
+              <tr>
+                <td>Comprimento</td>
+                <td>Exemplo: 10 (para CHAR), 13.2 (para DEC com 2 casas decimais)</td>
+              </tr>
+              <tr>
+                <td>Descrição</td>
+                <td>Nome explicativo do campo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>Dica: use nomes em letras maiúsculas e com prefixos claros que identifiquem o campo.</p>
+
+        <ol start="5">
+          <li>Salve e ative a tabela:
+            <ul>
+              <li>Clique no ícone de disquete para <strong>salvar</strong>.</li>
+              <li>Clique no ícone de martelo para <strong>ativar</strong> a tabela.</li>
+              <li>Se estiver em ambiente de desenvolvimento, o SAP pode solicitar uma ordem de transporte.</li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">O que acontece após adicionar um campo?</h2>
+        <ul>
+          <li>O novo campo passa a fazer parte da base de dados da tabela.</li>
+          <li>Ele pode ser usado em relatórios, ALVs, formulários, integrações e programas ABAP.</li>
+        </ul>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">Importante</h2>
+        <ul>
+          <li>Você só pode alterar tabelas <strong>Z</strong> (customizadas). Tabelas padrão da SAP não podem ser modificadas diretamente.</li>
+          <li>Se a tabela já possui registros, o novo campo será adicionado com valor <code>NULL</code> até que seja preenchido manualmente ou via código ABAP.</li>
+        </ul>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">Exemplo prático</h2>
+        <p>Suponha que deseja adicionar a coluna <code>COD_CATEGORIA</code> com tipo <code>CHAR</code> e tamanho 4. O preenchimento seria:</p>
+
+        <div class="table-responsive">
+          <table class="table table-bordered mt-3">
+            <thead class="table-light">
+              <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>Comprimento</th>
+                <th>Texto explicativo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>COD_CATEGORIA</td>
+                <td>CHAR</td>
+                <td>4</td>
+                <td>Código da categoria</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <h2 class="h4">Resumo ilustrado</h2>
+        <p>
+          A sequência básica para adicionar um campo é:
+        </p>
+        <p class="fw-semibold">
+          SE11 → Digite o nome da tabela → Clique em ALTERAR → Vá na aba CAMPOS → Adicione o novo campo → SALVE e ATIVE → PRONTO
+        </p>
+      </section>
+    </main>
+  <footer class="bg-light text-center py-3 mt-5">
+    <p>&copy; 2025 Portfólio Isabela</p>
+    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+  </footer>
+
+  <!-- Scripts Bootstrap 4.5.2 -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
