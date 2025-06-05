@@ -197,7 +197,54 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto: Resumo e sentimento com IA -->
+<div class="col-md-6 mb-4">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">
+        Resumo e Análise de Sentimentos com IA
+      </h5>
+      <p class="card-text">
+        Aplicativo web para resumir textos e identificar o sentimento (positivo ou negativo),
+        utilizando modelos pré-treinados da Hugging Face em uma interface simples com Streamlit.
+      </p>
+      <button
+        class="btn btn-secondary"
+        onclick="toggleDetalhes('detalhes-resumoSentimento')"
+      >
+        Ver Detalhes
+      </button>
+      <a
+        href="https://github.com/Isaisabelabela/ResumoTxtIA"
+        target="_blank"
+        class="btn btn-primary mt-2"
+      >
+        Acessar Repositório
+      </a>
+      <div
+        id="detalhes-resumoSentimento"
+        class="detalhes-content mt-3"
+        style="display: none"
+      >
+        <h3>Tecnologias Utilizadas</h3>
+        <ul>
+          <li><strong>Python</strong>: linguagem principal do projeto</li>
+          <li><strong>Streamlit</strong>: criação da interface web interativa</li>
+          <li><strong>Transformers (Hugging Face)</strong>: uso de modelos para NLP</li>
+          <li><strong>pipeline</strong>:
+            - <code>summarization</code> com modelo <code>sshleifer/distilbart-cnn-12-6</code><br>
+            - <code>sentiment-analysis</code> com modelo <code>distilbert-base-uncased-finetuned-sst-2-english</code>
+          </li>
+          <li><strong>dotenv</strong>: leitura segura de variáveis de ambiente (API key)</li>
+        </ul>
       </div>
+    </div>
+  </div>
+</div>
+
+
+       </div>
     </main>
 
     <footer class="bg-light text-center py-3">
