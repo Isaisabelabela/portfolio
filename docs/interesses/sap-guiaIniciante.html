@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia SAP ABAP - Portfólio Isabela</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    /* Estilos para o header */
+    header {
+      position: sticky; /* Torna o header "grudento" no topo */
+      top: 0;
+      z-index: 1000; /* Garante que o header fique sobre outros elementos */
+      background-color: #f8f9fa; /* Fundo para o header, se não estiver definido */
+    }
+
+    /* Layout principal com flexbox */
+    .content {
+      display: flex;
+      padding: 20px; /* Adiciona padding geral para espaçamento */
+      align-items: flex-start; /* Alinha os itens ao topo */
+    }
+
+    /* Estilos para a sidebar */
+    aside {
+      position: sticky; /* Torna a sidebar "grudenta" */
+      /* Ajusta o 'top' para ficar logo abaixo do header.
+         Supondo que o navbar-light bg-light do Bootstrap tenha aproximadamente 56px de altura.
+         Adicione um padding extra se quiser um espaço entre o header e a sidebar. */
+      top: calc(56px + 20px); /* 56px (altura do header) + 20px (espaçamento) */
+      height: fit-content; /* A altura se ajusta ao conteúdo da sidebar */
+      padding: 15px; /* Espaço interno */
+      border-right: 1px solid #ddd; /* Separador visual */
+      background-color: #f8f9fa; /* Fundo claro */
+      border-radius: 5px; /* Bordas arredondadas */
+      min-width: 200px; /* Largura mínima para a sidebar */
+      flex-shrink: 0; /* Impede que a sidebar encolha */
+      margin-right: 30px; /* Espaço entre a sidebar e o conteúdo principal */
+    }
+
+    /* Estilos para o conteúdo principal */
+    main {
+      flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+      padding-bottom: 50px; /* Garante que haja espaço para o footer e rolagem extra */
+    }
+
+    /* Ajuste para links da sidebar */
+    .sidebar-link {
+        display: block; /* Faz cada link ocupar sua própria linha */
+        padding: 8px 0; /* Espaçamento interno para os links */
+        color: #007bff; /* Cor dos links */
+        text-decoration: none; /* Remove sublinhado padrão */
+    }
+
+    .sidebar-link:hover {
+        text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    }
+
+    /* Estilos para o título da sidebar */
+    .sidebar-title {
+        font-weight: bold;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <a class="navbar-brand" href="../index.html">Meu Portfólio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="../sobre.html">Sobre Mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="../interesses.html">Interesses</a></li>
+          <li class="nav-item"><a class="nav-link" href="../projetos.html">Projetos</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="content">
+    <aside>
+      <div class="sidebar-title">Tópicos</div>
+      <a href="#introducao" class="sidebar-link">Introdução ao SAP ABAP</a>
+      <a href="#componentes" class="sidebar-link">Componentes Essenciais do SAP</a>
+      <a href="#desafio" class="sidebar-link">Entendendo o Desafio ALV</a>
+      <a href="#passo1" class="sidebar-link">Passo 1: Validação de Dados</a>
+      <a href="#passo2" class="sidebar-link">Passo 2: Modificando a Estrutura ALV</a>
+      <a href="#passo3" class="sidebar-link">Passo 3: Buscando os Novos Dados</a>
+      <a href="#passo4" class="sidebar-link">Passo 4: Atualizando o Field Catalog</a>
+      <a href="#passo5" class="sidebar-link">Passo 5: Teste e Ativação</a>
+      <a href="#dicas" class="sidebar-link">Dicas para Iniciantes em ABAP</a>
+    </aside>
+
+    <main>
+      <div class="text-left mb-4">
+        <button class="btn btn-outline-secondary" onclick="window.location.href='../interesses.html'">← Voltar</button>
+      </div>
+
+      <section id="introducao">
+        <h2>Guia SAP ABAP: Seus Primeiros Passos no Desenvolvimento</h2>
+        <p>Olá, futuro desenvolvedor ABAP! Se você está começando sua jornada no mundo SAP e se deparou com a necessidade de modificar um relatório ALV (ABAP List Viewer), você veio ao lugar certo. Este guia foi cuidadosamente elaborado para te acompanhar desde os conceitos mais fundamentais do SAP até a implementação prática de novas colunas em um relatório ALV existente. Prepare-se para desmistificar o ABAP e ver suas modificações ganharem vida!</p>
+        <p>Aprender ABAP é como desvendar um novo idioma, onde cada linha de código é uma frase que "conversa" com o sistema SAP. Com este guia, queremos simplificar essa curva de aprendizado, focando nos aspectos práticos que você realmente usará no dia a dia. Você verá que com a abordagem correta, até mesmo as tarefas que parecem mais complexas podem ser quebradas em passos gerenciáveis.</p>
+        <p>O universo SAP é vasto e cheio de possibilidades. Desde a gestão de vendas e estoque até a contabilidade e recursos humanos, tudo é orquestrado por trás das cortinas por programas ABAP. Entender como eles funcionam e como interagir com eles é o primeiro passo para se tornar um desenvolvedor SAP completo. Vamos começar essa jornada!</p>
+      </section>
+
+      <section id="componentes">
+        <h3>1. Componentes Essenciais do SAP para Desenvolvedores</h3>
+        <p>Antes de mergulharmos no código, é crucial entender os pilares do ambiente SAP com os quais você, como desenvolvedor ABAP, interagirá constantemente:</p>
+        <ul>
+          <li>
+            <p><strong>Tabelas de Banco de Dados:</strong> São o coração do SAP, onde todos os dados são armazenados de forma estruturada. Pense nelas como grandes planilhas eletrônicas, mas muito mais complexas e interconectadas. Para visualizar e explorar os dados de uma tabela, você usará as transações:</p>
+            <ul>
+              <li><strong>SE11 (ABAP Dictionary):</strong> Esta transação é o seu dicionário de dados no SAP. Nela, você pode ver a estrutura técnica de qualquer tabela (campos, tipos de dados, chaves primárias, índices), verificar domínios e elementos de dados. É sua ferramenta para entender como os dados são organizados e quais informações estão disponíveis.</li>
+              <li><strong>SE16N (Data Browser):</strong> Essencial para navegar e exibir o conteúdo de tabelas. Com ela, você pode filtrar, ordenar, exportar dados e até mesmo fazer pequenas modificações (com cautela e permissão). É vital para validar se a informação que você precisa realmente existe e está no formato esperado antes de começar a codificar.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Programas ABAP:</strong> Onde a lógica de negócio e as funcionalidades são codificadas. Programas ABAP são a "alma" do SAP, executando desde a criação de relatórios complexos até a automação de processos industriais. As principais transações para trabalhar com programas são:</p>
+            <ul>
+              <li><strong>SE38 (ABAP Editor):</strong> Sua área de trabalho principal. É a ferramenta para criar, visualizar, modificar e ativar o código-fonte de programas ABAP. Você passará a maior parte do seu tempo aqui, transformando requisitos de negócio em funcionalidade.</li>
+              <li><strong>SE80 (Object Navigator):</strong> Uma ferramenta mais abrangente. Permite navegar por todos os objetos de desenvolvimento (programas, módulos de função, classes, estruturas, dicionário de dados, grupos de funções, etc.). É útil para uma visão mais holística do sistema e para gerenciar projetos maiores.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Transações SAP:</strong> São códigos curtos (geralmente de 4 a 6 caracteres, como `VA01` para criar pedidos de vendas ou `MM01` para criar materiais) que permitem aos usuários acessar funcionalidades específicas dentro do sistema SAP. Uma transação como `ZQM00010` é uma transação personalizada (iniciada com 'Z' ou 'Y') desenvolvida para atender a necessidades específicas de uma empresa.</p>
+          </li>
+        </ul>
+        <p>Entender a função de cada um desses componentes é fundamental para navegar e desenvolver no ambiente SAP com confiança.</p>
+      </section>
+
+      <section id="desafio">
+        <h3>2. O Desafio: Adicionando Novas Colunas em um Relatório ALV Existente</h3>
+        <p>Vamos encarar um desafio comum e prático: você recebeu a tarefa de aprimorar um relatório ALV (ABAP List Viewer) que já existe e é acessado pela transação customizada `ZQM00010`. O objetivo é tornar a visualização dos dados mais completa, adicionando três novas colunas cruciais: **POS_AMOSTRA**, **DIR_AMOSTRA** e **CORRIDA**. Este é um cenário muito frequente no dia a dia de um desenvolvedor ABAP, e este guia vai te capacitar a enfrentar desafios similares com total confiança, passo a passo.</p>
+        <p>A essência do ALV é exibir dados de forma tabelar e interativa. Sua tarefa é integrar essas novas informações de forma que elas se apresentem perfeitamente ao lado dos dados existentes, mantendo a funcionalidade do relatório intacta. Vamos ver como fazer isso, desde a verificação dos dados até a ativação final do seu código.</p>
+      </section>
+
+      <section id="passo1">
+        <h4>Passo 1: Validando a Existência dos Dados nas Tabelas</h4>
+        <p>Antes de escrever qualquer linha de código para exibir dados, a etapa mais crítica é **confirmar que esses dados realmente existem** nas tabelas do banco de dados e que você tem as permissões necessárias para acessá-los. Para o nosso desafio, utilizaremos a transação **SE11 (ABAP Dictionary)** para inspecionar as estruturas das tabelas <code>ZTQM0000001</code> e <code>ZTQM0000005</code>. Verifique se os campos <code>POS_AMOSTRA</code>, <code>DIR_AMOSTRA</code> e <code>CORRIDA</code> estão presentes nessas tabelas, com seus respectivos tipos de dados e comprimentos. É crucial que o nome do campo no seu código ABAP corresponda exatamente ao nome do campo na tabela.</p>
+        <p>Após a verificação da estrutura, use a transação **SE16N (Data Browser)** para visualizar alguns registros das tabelas. Filtre por dados conhecidos e certifique-se de que há valores populados nesses campos. Essa validação prévia economiza muito tempo e evita a frustração de tentar exibir dados que não existem ou estão vazios no banco de dados.</p>
+      </section>
+
+      <section id="passo2">
+        <h4>Passo 2: Modificando a Estrutura Interna do Relatório ALV</h4>
+        <p>Para que o relatório ALV possa exibir as novas colunas, precisamos primeiro informar ao programa ABAP que a estrutura de dados que ele manipula agora inclui esses campos adicionais. Isso é feito definindo ou estendendo uma **estrutura interna** (geralmente através de um <code>TYPES</code> ou <code>STRUCTURE</code>). Essa estrutura representa uma única linha de dados que será exibida no ALV.</p>
+        <p>Localize a declaração da estrutura de saída do relatório ALV (que normalmente é uma `TYPE` `BEGIN OF ... END OF`). Adicione os campos `POS_AMOSTRA`, `DIR_AMOSTRA` e `CORRIDA` a essa estrutura, utilizando os tipos de dados que você verificou na SE11. Veja o exemplo abaixo:</p>
+        <pre><code class="language-abap">
+* Declaração de uma estrutura de linha para a tabela interna do ALV.
+* Esta estrutura 'ty_alv_output' define o layout de cada linha que será exibida no relatório ALV.
+TYPES: BEGIN OF ty_alv_output,
+         " ( ... outros campos existentes no ALV ... )
+         " Campo para a posição da amostra, com tipo de dado ZDE_POS_AMOSTRA.
+         pos_amostra   TYPE ZDE_POS_AMOSTRA,
+         " Campo para a direção da amostra, com tipo de dado ZDE_DIR_AMOSTRA.
+         dir_amostra   TYPE ZDE_DIR_AMOSTRA,
+         " Campo para o número da corrida, com tipo de dado ZDE_CORRIDA,
+         corrida       TYPE ZDE_CORRIDA,
+       END OF ty_alv_output.
+
+* Uma tabela interna do tipo TY_ALV_OUTPUT, que armazenará os dados antes de serem exibidos.
+* É essencial que esta tabela seja do mesmo tipo da estrutura de saída do ALV.
+DATA: gt_alv_output TYPE STANDARD TABLE OF ty_alv_output WITH EMPTY KEY.
+* Uma variável de trabalho (work area) do tipo TY_ALV_OUTPUT para processar cada linha individualmente.
+DATA: gs_alv_line   TYPE ty_alv_output.
+        </code></pre>
+        <p><strong>Dica Didática:</strong> Imagine a `ty_alv_output` como a "receita" para cada linha do seu relatório. Cada ingrediente (campo) que você adiciona aqui se tornará uma coluna no ALV. A tabela interna `gt_alv_output` é o "pote" onde todas as linhas do relatório serão armazenadas antes de serem apresentadas.</p>
+      </section>
+
+      <section id="passo3">
+        <h4>Passo 3: Buscando e Preenchendo os Novos Dados</h4>
+        <p>Com a estrutura interna do ALV atualizada, o próximo passo é buscar os dados correspondentes nas tabelas do SAP e preenchê-los na sua tabela interna (`gt_alv_output`). Você precisará identificar a parte do programa ABAP onde os dados são coletados para o relatório ALV. Geralmente, isso ocorre dentro de um laço (`LOOP AT`) que itera sobre os dados principais do relatório, ou antes da chamada da função de exibição do ALV.</p>
+        <p>Dentro desse contexto, adicione a lógica para buscar os valores de `POS_AMOSTRA`, `DIR_AMOSTRA` e `CORRIDA` das tabelas `ZTQM0000001` e `ZTQM0000005`. Você provavelmente usará uma instrução `SELECT SINGLE` (para buscar um único registro) ou `SELECT` (para buscar múltiplos) com uma cláusula `WHERE` para garantir que você está recuperando os dados corretos para a linha atual do relatório.</p>
+        <pre><code class="language-abap">
+* Exemplo de como buscar os dados.
+* Supondo que 'chave' seja a chave primária que conecta as tabelas ZTQM0000001 e ZTQM0000005.
+* Este SELECT SINGLE buscará os campos desejados da tabela ZTQM0000001.
+* A variável 'valor_da_chave_atual' deve ser populada com a chave do registro que você está processando no loop principal do relatório.
+SELECT SINGLE pos_amostra dir_amostra corrida
+  INTO (gs_alv_line-pos_amostra,
+        gs_alv_line-dir_amostra,
+        gs_alv_line-corrida)
+  FROM ZTQM0000001
+  WHERE chave = valor_da_chave_atual. " Adapte esta cláusula WHERE para sua lógica de negócio!
+* Se os dados estiverem em ZTQM0000005, você faria outro SELECT ou um JOIN.
+
+* Após preencher gs_alv_line com todos os dados (antigos e novos), adicione-a à tabela interna principal.
+APPEND gs_alv_line TO gt_alv_output.
+        </code></pre>
+        <p><strong>Detalhe Importante:</strong> A cláusula `WHERE` em sua instrução `SELECT` é absolutamente crucial. Ela garante que você está buscando os dados específicos e relevantes para a linha de relatório que está sendo construída. Certifique-se de que a `valor_da_chave_atual` corresponda a um campo-chave ou a uma combinação de campos que identifique univocamente o registro na tabela de origem.</p>
+      </section>
+
+      <section id="passo4">
+        <h4>Passo 4: Atualizando o Field Catalog (Catálogo de Campos)</h4>
+        <p>O **Field Catalog** é uma das partes mais importantes na exibição de um relatório ALV. Ele atua como um "dicionário" que informa ao sistema ALV quais colunas devem ser exibidas, em que ordem, seus títulos de cabeçalho, larguras, se são editáveis, se possuem totais, entre outras características. Para cada nova coluna que você deseja exibir, é absolutamente necessário adicionar uma entrada correspondente neste catálogo.</p>
+        <p>No seu programa ABAP, localize onde a tabela interna do Field Catalog (geralmente nomeada como `LT_FIELDCAT` ou similar, e do tipo `SLIS_T_FIELDCAT_ALV` ou `LVC_T_FCAT`) é preenchida. Para cada uma das suas novas colunas, você deverá preencher uma estrutura individual (por exemplo, `LS_FIELDCAT`) com as informações da coluna e, em seguida, adicioná-la à tabela do Field Catalog.</p>
+        <pre><code class="language-abap">
+* Limpa a estrutura de trabalho do field catalog para garantir que não haja dados residuais de iterações anteriores.
+CLEAR ls_fieldcat.
+* Define o nome do campo exatamente como ele está declarado na sua estrutura interna (ty_alv_output).
+ls_fieldcat-fieldname = 'POS_AMOSTRA'.
+* Define o texto longo que aparecerá como título da coluna no relatório ALV.
+ls_fieldcat-seltext_l = 'Posição Amostra'.
+* Você pode adicionar outras propriedades aqui, como:
+* ls_fieldcat-col_pos = 10. " Posição da coluna no ALV
+* ls_fieldcat-outputlen = 15. " Largura da coluna
+* ls_fieldcat-do_sum = 'X'. " Se deseja somar os valores desta coluna
+
+* Adiciona esta definição de campo à tabela interna principal do field catalog.
+APPEND ls_fieldcat TO lt_fieldcat.
+
+* Repita o processo para a coluna DIR_AMOSTRA
+CLEAR ls_fieldcat.
+ls_fieldcat-fieldname = 'DIR_AMOSTRA'.
+ls_fieldcat-seltext_l = 'Direção Amostra'.
+APPEND ls_fieldcat TO lt_fieldcat.
+
+* E, finalmente, para a coluna CORRIDA
+CLEAR ls_fieldcat.
+ls_fieldcat-fieldname = 'CORRIDA'.
+ls_fieldcat-seltext_l = 'Número da Corrida'.
+APPEND ls_fieldcat TO lt_fieldcat.
+        </code></pre>
+        <p><strong>Explore Mais:</strong> O Field Catalog é extremamente flexível. Você pode explorar a estrutura `LVC_S_FCAT` (para ALV com `CL_GUI_ALV_GRID`) ou `SLIS_FIELDCAT_ALV` (para ALV com `REUSE_ALV_GRID_DISPLAY`) na SE11 para descobrir todas as propriedades que você pode configurar para cada coluna. Isso inclui formatação, ícones, cores e muito mais.</p>
+      </section>
+
+      <section id="passo5">
+        <h4>Passo 5: Teste, Ativação e Validação Final</h4>
+        <p>Com todas as modificações no código implementadas (estrutura interna, busca de dados e Field Catalog), é o momento de testar o seu trabalho! Siga os seguintes passos:</p>
+        <ol>
+          <li><strong>Ativação do Programa:</strong> Abra o programa ABAP na transação **SE38** e ative-o. A ativação é um passo fundamental que compila o seu código e o torna executável. Se houverem erros de sintaxe, o sistema irá apontá-los e você deverá corrigi-los antes de prosseguir.</li>
+          <li><strong>Execução da Transação:</strong> Após a ativação bem-sucedida, execute a transação <code>ZQM00010</code>. Esta é a transação que invoca o relatório ALV que você modificou.</li>
+          <li><strong>Validação Visual:</strong> Verifique cuidadosamente se as novas colunas **POS_AMOSTRA**, **DIR_AMOSTRA** e **CORRIDA** aparecem no relatório ALV. Observe a posição das colunas e seus cabeçalhos.</li>
+          <li><strong>Validação de Dados:</strong> O mais importante é verificar a **integridade dos dados**. Compare os valores exibidos no ALV com os valores das tabelas originais (usando a SE16N) para garantir que não houve nenhum erro na lógica de busca ou no mapeamento dos dados. Teste com diferentes cenários e filtros, se aplicável, para cobrir o máximo de casos possíveis.</li>
+        </ol>
+        <p>Se as colunas aparecerem com os dados corretos, parabéns! Você completou sua primeira modificação de ALV com sucesso. Se algo não estiver como o esperado, retorne ao Debugger (Passo 1 das dicas) para investigar.</p>
+      </section>
+
+      <section id="dicas">
+        <h4>Dicas Essenciais para Desenvolvedores ABAP Iniciantes</h4>
+        <ul>
+          <li>
+            <p><strong>O Poder do Debugger (<code>/h</code>):</strong> Esta é, sem dúvida, a ferramenta mais valiosa para qualquer desenvolvedor ABAP. Para ativá-lo, digite <code>/h</code> no campo de comando (onde você normalmente digita as transações, como <code>SE38</code> ou <code>ZQM00010</code>) e pressione Enter antes de executar o programa ou a transação. Isso permite que você execute seu código passo a passo (`F5`), avance por procedimentos (`F6`), execute até o próximo breakpoint (`F8`) e inspecione o valor de variáveis, tabelas internas e estruturas em tempo real. Dominar o Debugger é fundamental para identificar e resolver problemas rapidamente.</p>
+          </li>
+          <li>
+            <p><strong>Comentários são seus Melhores Amigos:</strong> Desenvolver em ABAP, ou em qualquer linguagem, é um trabalho colaborativo. Escreva comentários claros, concisos e explicativos no seu código. Eles devem detalhar a lógica por trás de seções complexas, o propósito de variáveis e funções, e quaisquer decisões de design importantes. Isso não só ajuda outros desenvolvedores (e seu futuro eu!) a entenderem seu código, mas também serve como documentação viva. Além disso, sempre preste atenção aos comentários existentes em códigos que você está modificando – eles são uma fonte rica de informação e contexto.</p>
+          </li>
+          <li>
+            <p><strong>Ordem de Transporte (OT):</strong> No SAP, todas as modificações de desenvolvimento (programas, tabelas, estruturas, Dicionário de Dados, etc.) são registradas em uma **Ordem de Transporte (OT)**. As OT's são pacotes de modificações que permitem que suas alterações sejam transportadas de um ambiente para outro (por exemplo, do ambiente de Desenvolvimento para Qualidade/Teste, e de Qualidade para Produção). Sempre salve suas alterações em uma OT apropriada. Use as transações <strong>SE09</strong> (Transport Organizer) ou <strong>SE10</strong> (Transport Organizer Workbench) para criar e gerenciar suas Ordens de Transporte. Sem elas, suas modificações não poderão ser movidas para os ambientes superiores, o que é crítico para o ciclo de vida do desenvolvimento no SAP.</p>
+          </li>
+          <li>
+            <p><strong>Pesquise e Aprenda Continuamente:</strong> A comunidade SAP ABAP é vasta e cheia de recursos valiosos. Utilize o SAP Help Portal (documentação oficial da SAP), fóruns de discussão (como o SAP Community Network - SCN), blogs especializados e tutoriais online. A busca ativa por conhecimento e a prática constante são chaves para o sucesso e para se manter atualizado no dinâmico mundo ABAP.</p>
+          </li>
+          <li>
+            <p><strong>Trace e Analise:</strong> Para problemas de performance ou para entender como um programa funciona em tempo de execução, utilize ferramentas como o **SQL Trace (ST05)** para analisar as chamadas ao banco de dados, e o **Runtime Analysis (SE30)** para medir o tempo de execução de diferentes partes do seu código. Essas ferramentas são avançadas, mas extremamente úteis.</p>
+          </li>
+        </ul>
+        <p>Com dedicação, paciência e a aplicação consistente desses passos e dicas, você estará bem encaminhado para se tornar um desenvolvedor SAP ABAP competente e confiante, capaz de solucionar desafios complexos e contribuir significativamente em projetos SAP. Boa sorte em sua jornada!</p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2025 Portfólio Isabela</p>
+    <a href="https://github.com/Isaisabelabela" target="_blank" class="mx-2 text-dark">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/isabeladepaulabarbosa/" target="_blank" class="mx-2 text-primary">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
