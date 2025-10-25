@@ -8,6 +8,7 @@ import './styles/Cover.css';
 
 import Cover from './components/Cover'; // Importa o componente Cover
 import Header from './components/Header';
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function App() {
   const skills = [
@@ -162,12 +163,52 @@ function App() {
         </section>
 
         {/* Seção de Contato */}
-        <section id="contact" className="container">
-          <h2>Contato</h2>
-          <p>Vamos conversar!</p>
-          <a href="/caminho/para/seu_cv.pdf" download>Download do meu CV</a>
+<section id="contact" className="container">
+          <h2>Vamos Conversar!</h2>
+          <p className="contact-intro">
+            Estou sempre aberta a novas oportunidades e conexões. Sinta-se a vontade 
+            para entrar em contato ou baixar meu currículo.
+          </p>
+
+          {/* Links de Contato */}
+          <div className="contact-links">
+            <a 
+              href="mailto:isabelabarbosa2002@hotmail.com" 
+              className="contact-link-item"
+            >
+              <FaEnvelope size={20} />
+              <span>isabelabarbosa2002@hotmail.com</span>
+            </a>
+            <a 
+              href="https://www.linkedin.com/in/isabeladepaulabarbosa/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="contact-link-item"
+            >
+              <FaLinkedin size={20} />
+              <span>LinkedIn</span>
+            </a>
+          </div>
+
+          {/* Botão de Download do CV */}
+          <div className="contact-cv">
+            <a 
+              href="/assets/CVIsabeladePaulaBarbosa.pdf" 
+              download="CV_Isabela_de_Paula_Barbosa.pdf"
+              className="cta-button"
+            >
+              Download do meu CV
+            </a>
+          </div>
         </section>
       </main>
+
+      {/* --- 3. ADICIONE O RODAPÉ NO FINAL --- */}
+      <footer className="footer">
+        <p>
+          &copy; {new Date().getFullYear()} Isabela de Paula Barbosa
+        </p>
+      </footer>
     </>
   );
 }

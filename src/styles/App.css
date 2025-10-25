@@ -398,3 +398,128 @@ section:last-of-type {
     animation-duration: 30s; /* Rola um pouco mais rápido */
   }
 }
+
+#contact {
+  text-align: center; /* Centraliza todo o conteúdo da seção */
+  /* Remove a borda de baixo da última seção */
+  border-bottom: none; 
+}
+
+/* Título (consistente com as outras seções) */
+#contact h2 {
+  font-family: var(--font-headline);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+#contact h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-accent); /* Rosa */
+}
+
+.contact-intro {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto 2.5rem auto; /* Centraliza o parágrafo */
+  color: var(--color-text);
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column; /* Empilha no mobile */
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.contact-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Espaço entre o ícone e o texto */
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text); /* Vinho */
+  background-color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-secondary-accent); /* Verde */
+  border-radius: 50px; /* Bordas de "pílula" */
+  transition: all 0.3s ease;
+  min-width: 300px; /* Largura mínima para estética */
+}
+
+.contact-link-item:hover {
+  background-color: var(--color-background);
+  border-color: var(--color-text); /* Vinho */
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(78, 10, 11, 0.1);
+}
+
+.contact-link-item svg {
+  color: var(--color-primary-accent); /* Ícone Rosa */
+  flex-shrink: 0; /* Impede que o ícone seja espremido */
+}
+
+/* Em telas maiores, coloca os links lado a lado */
+@media (min-width: 768px) {
+  .contact-links {
+    flex-direction: row; /* Lado a lado */
+  }
+  .contact-link-item {
+    min-width: auto; /* Tira a largura mínima */
+  }
+}
+
+.contact-cv {
+  margin-top: 2rem; /* Espaço extra para o botão de CV */
+}
+
+/* Botão de Call-to-Action (CTA) para o CV */
+.cta-button {
+  display: inline-block;
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-background); /* Texto Branco */
+  background-color: var(--color-text); /* Fundo Vinho */
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: 2px solid var(--color-text);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--color-primary-accent); /* Fundo Rosa no hover */
+  border-color: var(--color-primary-accent);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(78, 10, 11, 0.2);
+}
+
+/* --- ESTILOS DO FOOTER --- */
+.footer {
+  text-align: center;
+  padding: 2.5rem;
+  background-color: var(--color-background);
+  border-top: 1px solid rgba(78, 10, 11, 0.1);
+  margin-top: 4rem; /* Separa da seção de contato */
+}
+
+.footer p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-secondary-accent); /* Verde Musgo (sutil) */
+}
