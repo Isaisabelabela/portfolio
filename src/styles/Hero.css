@@ -1,0 +1,102 @@
+/* src/styles/Hero.css */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* 100% da altura da tela menos a altura do header */
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f9fa; /* Um fundo claro, mas não branco puro */
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 3rem; /* Tamanho grande para impacto */
+  margin-bottom: 0.5rem;
+  color: #212529;
+}
+
+.hero-title strong {
+  /* Opcional: Destaque o nome com a cor primária */
+  color: var(--primary-color, #007bff); /* Usa a variável do Index.css ou um fallback */
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.hero-cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Espaço entre os botões */
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px; /* Bordas arredondadas */
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Botão primário (com fundo) */
+.hero-cta--primary {
+  background-color: var(--primary-color, #007bff);
+  color: #fff;
+}
+
+.hero-cta--primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px); /* Efeito de elevação */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão secundário (apenas contorno) */
+.hero-cta--secondary {
+  color: var(--primary-color, #007bff);
+  border-color: var(--primary-color, #007bff);
+}
+
+.hero-cta--secondary:hover {
+  background-color: var(--primary-color, #007bff);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-cta-container {
+    flex-direction: column; /* Empilha os botões */
+    align-items: center;
+  }
+  
+  .hero-cta {
+    width: 80%; /* Faz os botões terem uma largura similar */
+  }
+}

@@ -1,0 +1,41 @@
+/* src/styles/Index.css */
+
+/* 1. Definição das Variáveis de Tema (Sua Paleta e Fontes) */
+:root {
+  /* Paleta de Cores */
+  --color-background: #F2EEE8;
+  --color-text: #4E0A0B;
+  --color-primary-accent: #E38792; /* Rosa claro */
+  --color-secondary-accent: #9DAD71; /* Verde musgo */
+
+  /* Tipografia */
+  --font-headline: 'Poppins', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* 2. Reset de CSS e Estilos Globais */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Efeito de rolagem suave ao clicar nos links do header */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline);
+}

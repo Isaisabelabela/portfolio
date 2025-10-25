@@ -1,0 +1,91 @@
+/* src/styles/Cover.css */
+
+.cover-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.cover-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cover-pre-title {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-primary-accent);
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  /* --- ANIMAÇÃO 1 --- */
+  opacity: 0; /* Começa invisível para a animação funcionar */
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  /* Animação: nome | duração | easing | atraso | preenchimento */
+}
+
+.cover-name {
+  font-family: var(--font-headline);
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+
+  /* --- ANIMAÇÃO 2 (com mais atraso) --- */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+.cover-tagline {
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-secondary-accent);
+
+  /* --- ANIMAÇÃO 3 (com o maior atraso) --- */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.9s forwards;
+}
+
+/* Responsividade (nenhuma mudança aqui) */
+@media (max-width: 992px) {
+  .cover-name { font-size: 4rem; }
+  .cover-pre-title { font-size: 1.5rem; }
+  .cover-tagline { font-size: 1.3rem; }
+}
+@media (max-width: 768px) {
+  .cover-name { font-size: 3rem; }
+  .cover-pre-title { font-size: 1.2rem; }
+  .cover-tagline { font-size: 1rem; }
+  .cover-section { padding: 1rem; }
+}
+@media (max-width: 480px) {
+  .cover-name { font-size: 2.5rem; }
+  .cover-pre-title { font-size: 1rem; }
+}
+
+
+/* Definição da Animação */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

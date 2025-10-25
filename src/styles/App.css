@@ -1,0 +1,400 @@
+/* src/styles/App.css */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Estilo padrão para todas as seções */
+section {
+  padding: 6rem 0;
+  border-bottom: 1px solid rgba(78, 10, 11, 0.1); /* Linha sutil usando a cor de texto com transparência */
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* src/styles/App.css */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 0;
+  border-bottom: 1px solid rgba(78, 10, 11, 0.1);
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* --- INÍCIO DO CÓDIGO DO ABOUT COLADO AQUI --- */
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-family: var(--font-headline);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-accent);
+}
+
+.about-content p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.about-mission {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text);
+  border-left: 3px solid var(--color-secondary-accent);
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+.about-section-wrapper {
+  display: flex; /* Habilita o Flexbox */
+  flex-direction: column; /* Em telas pequenas, itens empilham */
+  align-items: center; /* Centraliza verticalmente e horizontalmente */
+  gap: 3rem; /* Espaço entre a imagem e o texto */
+  max-width: 1000px; /* Limita a largura total do conteúdo da seção */
+  margin: 0 auto; /* Centraliza o wrapper na página */
+}
+
+/* Em telas maiores, coloca imagem e texto lado a lado */
+@media (min-width: 769px) {
+  .about-section-wrapper {
+    flex-direction: row; /* Coloca itens em linha */
+    text-align: left; /* Alinha o texto à esquerda */
+    gap: 4rem; /* Mais espaço em telas maiores */
+  }
+}
+
+.about-image-container {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+  width: 250px; /* Tamanho da sua imagem */
+  height: 250px;
+  border-radius: 50%; /* Torna a imagem redonda */
+  overflow: hidden; /* Garante que a borda redonda funcione */
+  border: 5px solid var(--color-primary-accent); /* Borda rosa claro (E38792) */
+  box-shadow: 0 0 0 5px var(--color-text); /* Segunda borda vinho (4E0A0B) */
+  transition: transform 0.3s ease; /* Animação ao passar o mouse */
+}
+
+.about-image-container:hover {
+  transform: scale(1.05); /* Efeito sutil ao passar o mouse */
+}
+
+.about-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+}
+
+.about-content {
+  flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+  max-width: 600px; /* Limita a largura do texto para melhor leitura */
+}
+
+.about-content h2 {
+  font-family: var(--font-headline);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-accent);
+}
+
+.about-content p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.about-mission {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-text);
+  border-left: 3px solid var(--color-secondary-accent); /* Verde Musgo (9DAD71) */
+  padding-left: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Responsividade de texto e título */
+@media (max-width: 768px) {
+    .about-content h2 {
+    font-size: 2.2rem;
+    left: auto;
+    transform: none;
+    width: 100%;
+  }
+  .about-content p {
+    font-size: 1rem;
+  }
+}
+
+#skills h2 {
+  font-family: var(--font-headline);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+#skills h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-accent); /* Rosa */
+}
+
+/* O grid responsivo para os logos */
+.skills-grid {
+  display: grid;
+  /* Cria colunas automáticas:
+    - Elas terão no MÍNIMO 120px de largura.
+    - Elas vão se ajustar para preencher o espaço (1fr).
+    - O navegador cuidará de quantas colunas cabem por linha.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem; /* Espaço entre os cards */
+  padding-top: 2rem; /* Espaço abaixo do título */
+}
+
+/* O card individual para cada skill */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: #fff; /* Fundo branco para destacar do fundo da página */
+  
+  /* A BORDA QUE VOCÊ PEDIU! */
+  border: 2px solid var(--color-secondary-accent); /* Verde Musgo */
+  
+  border-radius: 10px; /* Bordas arredondadas */
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover para interatividade */
+.skill-item:hover {
+  transform: translateY(-5px); /* Eleva o card sutilmente */
+  border-color: var(--color-primary-accent); /* Muda a borda para rosa */
+  box-shadow: 0 4px 15px rgba(78, 10, 11, 0.1); /* Sombra suave (cor vinho) */
+}
+
+/* Estilo para o logo dentro do card */
+.skill-item img {
+  height: 60px; /* Altura uniforme para todos os logos */
+  width: auto;
+  object-fit: contain; /* Garante que o logo não seja distorcido */
+  margin-bottom: 1rem;
+}
+
+/* Estilo para o nome da tecnologia */
+.skill-item p {
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--color-text); /* Cor vinho */
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#certificates h2 {
+  font-family: var(--font-headline);
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 0.5rem;
+}
+
+#certificates h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-accent); /* Rosa */
+}
+
+/* Bloco de Destaque do Projeto */
+.project-highlight {
+  background-color: #fff; /* Fundo branco para destacar */
+  border-left: 5px solid var(--color-primary-accent); /* Borda rosa */
+  padding: 2rem 2.5rem;
+  margin: 2rem 0 3rem 0; /* Espaçamento */
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(78, 10, 11, 0.08); /* Sombra vinho sutil */
+}
+
+.project-highlight h3 {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.project-highlight p {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* Caixa de Agradecimentos */
+.project-thanks {
+  background-color: var(--color-background); /* Cor de fundo da página */
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  border: 1px dashed var(--color-secondary-accent); /* Borda verde musgo */
+}
+
+.project-thanks p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.project-thanks p:last-child {
+  margin-bottom: 0;
+}
+
+/* Parágrafo de Conclusão */
+.project-conclusion {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem !important; /* Destaque */
+  text-align: center;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 0 !important;
+}
+
+
+/* --- ESTILOS PARA O CARROSSEL AUTOMÁTICO --- */
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* Esconde as imagens que saem da tela */
+  /* Adiciona um "fade" nas bordas para o efeito ficar mais suave */
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.carousel-track {
+  display: flex; /* Coloca as imagens em linha */
+  
+  /* --- Mágica do CSS --- */
+  /* --num-slides: 6 (o número REAL de imagens)
+    --slide-width: 300px (largura de cada imagem)
+    --slide-gap: 20px (espaço entre elas)
+  */
+  --num-slides: 6; 
+  --slide-width: 300px;
+  --slide-gap: 20px;
+  
+  /* Largura total da lista de imagens ORIGINAL */
+  --track-width-single: calc(var(--num-slides) * (var(--slide-width) + var(--slide-gap)));
+  
+  /* Largura total da lista DUPLICADA (original + clone) */
+  width: calc(var(--track-width-single) * 2);
+
+  /* Aplica a animação 'scroll' */
+  animation: scroll 40s linear infinite;
+}
+
+/* Animação que move a 'track' da esquerda para a direita */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Move a 'track' exatamente a largura da lista original */
+    transform: translateX(calc(var(--track-width-single) * -1));
+  }
+}
+
+/* Pausa a animação quando o mouse está em cima */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-slide {
+  width: var(--slide-width);
+  margin-right: var(--slide-gap);
+  flex-shrink: 0;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 200px; /* Altura fixa para todas as imagens */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: 8px;
+  border: 3px solid var(--color-background); /* Borda na cor de fundo */
+  box-shadow: 0 4px 10px rgba(78, 10, 11, 0.1);
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .project-highlight {
+    padding: 1.5rem;
+  }
+  .carousel-track {
+    --slide-width: 250px; /* Imagens um pouco menores no mobile */
+    animation-duration: 30s; /* Rola um pouco mais rápido */
+  }
+}
