@@ -45,7 +45,7 @@ function App() {
             <div className="about-image-container">
               {/* Ajuste o 'src' para o caminho real da sua foto */}
               <img 
-                src={`${BASE_PATH}public/assets/fotoPerfil.jpg`} 
+                src={`${BASE_PATH}/assets/fotoPerfil.jpg`} 
                 alt="Isabela de Paula Barbosa" 
               />
             </div>
