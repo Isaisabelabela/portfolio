@@ -1,45 +1,59 @@
-# .github/workflows/deploy.yml
+# Nome do seu workflow (aparecerá na aba "Actions")
+name: Deploy para GitHub Pages
 
-name: Deploy to GitHub Pages
-
+# Gatilho: Rodar este workflow sempre que houver um 'push' na branch 'main'
 on:
   push:
     branches:
-      - main
+      - main  # Mude para 'master' se sua branch principal tiver esse nome
+
+# Permissões: O workflow precisa de permissões para escrever no ambiente do Pages
+permissions:
+  contents: read
+  pages: write      # Essencial para 'deploy-pages'
+  id-token: write   # Essencial para 'deploy-pages'
 
 jobs:
+  # O nome do seu "job"
   build-and-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
+    runs-on: ubuntu-latest # Usar a última versão do Ubuntu como ambiente
 
     steps:
+      # 1. Baixa o seu código do repositório
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      # 2. Configura o Bun (já que você está usando bun)
       - name: Setup Bun 🐰
         uses: oven/setup-bun@v1
 
+      # 3. Instala as dependências do projeto
       - name: Install Dependencies 📦
         run: bun install
 
+      # 4. Constrói (build) o projeto
+      # (Roda o script "build" do seu package.json)
       - name: Build Project 🔨
         run: bun run build
 
-      # --- ADICIONE ESTE PASSO ---
+      # 5. O TRUQUE PARA SPAs/ROUTER (Opcional, mas recomendado)
+      # Copia o index.html para 404.html.
+      # Isso faz o GitHub Pages carregar seu app React em vez de uma página 404.
       - name: Create 404.html Fallback 📄
         run: cp dist/index.html dist/404.html
 
+      # 6. Configura o GitHub Pages para o deploy
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
 
+      # 7. Faz o upload dos arquivos construídos (da pasta 'dist')
       - name: Upload Artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
+          # O Vite constrói para a pasta 'dist' por padrão
           path: ./dist
 
+      # 8. Finalmente, faz o deploy dos arquivos no GitHub Pages
       - name: Deploy to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v47
+        uses: actions/deploy-pages@v4
