@@ -1,9 +1,11 @@
+# .github/workflows/deploy.yml
+
 name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Ou 'master', 'production', dependendo da sua branch principal
+      - main
 
 jobs:
   build-and-deploy:
@@ -24,7 +26,11 @@ jobs:
         run: bun install
 
       - name: Build Project 🔨
-        run: bun run build  # Executa o script "build" do seu package.json
+        run: bun run build
+
+      # --- ADICIONE ESTE PASSO ---
+      - name: Create 404.html Fallback 📄
+        run: cp dist/index.html dist/404.html
 
       - name: Setup Pages ⚙️
         uses: actions/configure-pages@v4
@@ -32,8 +38,8 @@ jobs:
       - name: Upload Artifact 📦
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist # O Vite compila para a pasta 'dist'
+          path: ./dist
 
       - name: Deploy to GitHub Pages 🚀
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v47

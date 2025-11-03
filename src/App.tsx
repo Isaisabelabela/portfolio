@@ -22,7 +22,7 @@ function App() {
     { name: 'Pandas', img: 'pyPandas.png' },
     { name: 'NumPy', img: 'pyNumPy.png' }
   ];
-
+  const BASE_PATH = import.meta.env.BASE_URL;
   const certificateImages = [
     'img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg', 'img6.jpg'
   ];
@@ -45,7 +45,7 @@ function App() {
             <div className="about-image-container">
               {/* Ajuste o 'src' para o caminho real da sua foto */}
               <img 
-                src="/assets/fotoPerfil.jpg" 
+                src={`${BASE_PATH}public/assets/fotoPerfil.jpg`} 
                 alt="Isabela de Paula Barbosa" 
               />
             </div>
@@ -89,7 +89,7 @@ function App() {
             */}
             {skills.map((skill) => (
               <div className="skill-item" key={skill.name}>
-                <img src={`/assets/skills/${skill.img}`} alt={skill.name} />
+                <img src={`${BASE_PATH}/assets/skills/${skill.img}`} alt={skill.name} />
                 <p>{skill.name}</p>
               </div>
             ))}
@@ -147,7 +147,7 @@ function App() {
             {doubledCertificates.map((imgName, index) => (
               <div className="carousel-slide" key={index}>
                 <img 
-                  src={`/assets/certificados/${imgName}`} 
+                  src={`${BASE_PATH}/assets/certificados/${imgName}`} 
                   alt={`Certificado ${index + 1}`} 
                 />
               </div>
@@ -193,7 +193,7 @@ function App() {
           {/* Botão de Download do CV */}
           <div className="contact-cv">
             <a 
-              href="/assets/CVIsabeladePaulaBarbosa.pdf" 
+              href={`${BASE_PATH}/assets/CVIsabeladePaulaBarbosa.pdf`} 
               download="CV_Isabela_de_Paula_Barbosa.pdf"
               className="cta-button"
             >
