@@ -25,7 +25,7 @@ jobs:
 
       # 2. Configura o Bun (já que você está usando bun)
       - name: Setup Bun 🐰
-        uses: oven/setup-bun@v1
+        uses: oven-sh/setup-bun@v1
 
       # 3. Instala as dependências do projeto
       - name: Install Dependencies 📦
